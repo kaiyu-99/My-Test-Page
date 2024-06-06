@@ -31,6 +31,21 @@
         function displayParams() {
             const { key1, key2 } = getQueryParams();
             document.getElementById('content').innerHTML = `<p>Key 1: ${key1}</p><p>Key 2: ${key2}</p>`;
+             (function(a,b,c,d,e,f,g){
+                e['ire_o']=c;
+                e[c]=e[c]||function(){
+                    (e[c].a=e[c].a||[]).push(arguments)
+                };
+                f=d.createElement(b);
+                g=d.getElementsByTagName(b)[0];
+                f.async=1;
+                f.src=a;
+                g.parentNode.insertBefore(f,g);
+            })('https://utt.impactcdn.com/A2788006-de3d-4011-a57c-c4737e79de0365535.js','script','ire',document,window);
+            ire('identify', {
+                customerid: key1,
+                customeremail: key2
+            });
         }
 
         displayParams();
